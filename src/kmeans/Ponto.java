@@ -9,6 +9,7 @@ public class Ponto {
     private double r;
     private double g;
     private double b;
+    //Grupo ao qual o ponto pertence
     private Cluster cluster;
 
     public Ponto(double r, double g, double b) {
@@ -49,12 +50,14 @@ public class Ponto {
         this.cluster = cluster;
     }
 
+    //Calcular distancia do ponto com o centroid informado
     protected static double distancia(Ponto p, Ponto centroid) {
         return Math.sqrt(Math.pow(p.getR() - centroid.getR(), 2) 
                         + Math.pow(p.getG() - centroid.getG(), 2)
                         + Math.pow(p.getB() - centroid.getB(), 2));
     }
 
+    //Criar um ponto aleatório
     protected static Ponto createRandomPonto() {
         double r = MIN_VALUE + (MAX_VALUE - MIN_VALUE) * new Random().nextDouble();
         double g = MIN_VALUE + (MAX_VALUE - MIN_VALUE) * new Random().nextDouble();

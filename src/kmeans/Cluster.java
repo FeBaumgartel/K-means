@@ -4,7 +4,9 @@ import java.util.List;
 
 public class Cluster {
 
+    //pontos deste grupo
     private List<Ponto> Pontos;
+    //centroid deste grupo
     private Ponto centroid;
     private int id;
 
@@ -42,6 +44,7 @@ public class Cluster {
         Pontos.clear();
     }
 
+    //Listar pontos do grupo
     public void listarCluster() {
         System.out.println("[Cluster: " + id + "]");
         System.out.println("[Centroid: " + centroid + "]");
